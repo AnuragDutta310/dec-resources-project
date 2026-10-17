@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { AuthProvider } from './context/AuthContext'
-import Loader from './components/Loader'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Browse from './pages/Browse'
@@ -19,7 +18,6 @@ function WithNav({ children }) {
 export default function App() {
   return (
     <AuthProvider>
-      <Loader />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<WithNav><Home /></WithNav>} />
